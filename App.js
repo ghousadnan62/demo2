@@ -17,9 +17,17 @@ import HeaderFooter from './src/components/HeaderFooter'
 type Props = {};
 export default class App extends Component<Props> {
 
+  constructor(props) {
+    super(props);
+    this.state = { isLoading: true }
+  }
 
 
   render() {
+    if (this.state.isLoading) {
+      return <SplashScreen />;
+    }
+
     return (
         <Container>
           <HeaderFooter/>
