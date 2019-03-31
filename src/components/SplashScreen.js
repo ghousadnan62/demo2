@@ -5,6 +5,9 @@ class SplashScreen extends Component {
         return (
             <div>
                 Testing Splash Screen.
+                Hello Ammar.
+                Can you see this.
+                lalalallala
             </div>
         );
     }
