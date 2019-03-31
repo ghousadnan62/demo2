@@ -10,8 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import {Container} from "native-base";
 import HeaderFooter from './src/components/HeaderFooter'
-
-
+import SplashScreen from './src/components/SplashScreen'
 
 
 type Props = {};
@@ -19,15 +18,30 @@ export default class App extends Component<Props> {
 
   constructor(props) {
     super(props);
-    this.state = { isLoading: true }
+    this.state={isLoading:true}
   }
 
+  performTimeDelay = async () => {
+    return new Promise((resolve) =>
+        setTimeout(
+            () => { resolve('result')},
+            1500
+        )
+    );
+  }
 
-  render() {
-    if (this.state.isLoading) {
-      return <SplashScreen />;
+  async componentDidMount() {
+    const data = await this.performTimeDelay();
+    if(data!==null)
+    {
+      this.setState({isLoading:false})
     }
+  }
+  render() {
 
+    if ( this.state.isLoading){
+      return (<SplashScreen/>)
+    }
     return (
         <Container>
           <HeaderFooter/>
