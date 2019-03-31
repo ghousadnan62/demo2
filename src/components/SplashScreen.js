@@ -1,16 +1,25 @@
 import React, {Component} from 'react';
+import {View,Text} from 'react-native';
 
-class SplashScreen extends Component {
+export default class SplashScreen extends Component {
     render() {
+        const viewStyles = [
+            {
+                background: 'white', alignItems: 'center', justifyContent: 'center', flex:1
+            }
+        ];
+        const textStyle = {
+            color:'black',
+            fontSize:40,
+            fontWeight: 'bold'
+        };
+
         return (
-            <div>
-                Testing Splash Screen.
-                Hello Ammar.
-                Can you see this.
-                lalalallala
-            </div>
+            <View style={viewStyles}>
+                <Text style={textStyle}>
+                    Farfetch
+                </Text>
+            </View>
         );
     }
 }
-
-export default SplashScreen;
