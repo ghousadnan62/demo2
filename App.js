@@ -21,6 +21,22 @@ export default class App extends Component<Props> {
     this.state={isLoading:true}
   }
 
+  performTimeDelay = async () => {
+    return new Promise((resolve) =>
+        setTimeout(
+            () => { resolve('result')},
+            1500
+        )
+    );
+  }
+
+  async componentDidMount() {
+    const data = await this.performTimeDelay();
+    if(data!==null)
+    {
+      this.setState({isLoading:false})
+    }
+  }
   render() {
 
     if ( this.state.isLoading){

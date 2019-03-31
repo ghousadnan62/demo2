@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {View,Text} from 'react-native';
-
+import {View,Text,Image} from 'react-native';
+import {Spinner} from 'native-base';
 export default class SplashScreen extends Component {
     render() {
         const viewStyles = [
@@ -10,7 +10,7 @@ export default class SplashScreen extends Component {
         ];
         const textStyle = {
             color:'black',
-            fontSize:40,
+            fontSize:70,
             fontWeight: 'bold'
         };
 
@@ -19,6 +19,7 @@ export default class SplashScreen extends Component {
                 <Text style={textStyle}>
                     Farfetch
                 </Text>
+                <Spinner color='black'/>
             </View>
         );
     }
