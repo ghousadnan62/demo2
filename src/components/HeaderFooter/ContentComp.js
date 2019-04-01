@@ -1,6 +1,6 @@
 import {Image} from "react-native";
 import {Content} from "native-base";
-import Card from '../Cards/Card'
+import CardContainer from '../Cards/CardContainer'
 import React from "react";
 
 const ContentComp = () => {
@@ -8,8 +8,8 @@ const ContentComp = () => {
         <Content>
             <Image source={require('../../Resources/Images/5.jpg')}
                    style={{width: '100%', height: 350}}/>
-            <Card name="Men Section"/>
-            <Card name="Kids Section"/>
+            <CardContainer name="Men Section"/>
+            <CardContainer name="Kids Section"/>
         </Content>
     )
 };

@@ -1,27 +1,37 @@
-import React, {Component} from 'react';
-import {Image} from 'react-native';
-import {StyleSheet, ScrollView, View} from 'react-native'
+import React from 'react';
+import {StyleSheet, ScrollView, View,Image} from 'react-native';
 import {
     Container,
     Card,
     CardItem,
-    Text, Button, Icon, FooterTab,
+    Text, Button
 } from 'native-base';
 
-export default class CardImageExample extends Component {
-    render() {
+const CardContainer = (props) =>{
         return (
 
-                <Container style={{marginTop: 10, height: 400,alignItems: 'center',
-                    justifyContent: 'center'}}>
+                <Container
+                    style={{
+                        marginTop: 10,
+                        height: 400,
+                        alignItems: 'center',
+                    justifyContent: 'center'
+                    }}>
+
                     <View>
                         <Text style={{fontWeight: 'bold', alignSelf:'center',marginBottom:20}}>
-                            {this.props.name}
+                            {props.name}
                         </Text>
                     </View>
+
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
 
-                        <Card style={{height: 270, width: 200, marginLeft: 20}}>
+                        <Card
+                            style={{
+                                height: 270,
+                                width: 200,
+                                marginLeft: 20}}>
+
                             <CardItem cardBody style={{flex:3}}>
                                 <Image source={require('../../Resources/Images/1.jpg')} style={{height: 200, flex:1}} />
                             </CardItem>
@@ -77,15 +87,5 @@ export default class CardImageExample extends Component {
                 </Container>
 
         );
-    }
-}
+};
 
-
-const styles = StyleSheet.create({
-
-    cardFooter: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex:1
-    }
-})
