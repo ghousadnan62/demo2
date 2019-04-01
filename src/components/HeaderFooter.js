@@ -10,11 +10,13 @@ import {
     Right,
     Body,
     Icon,
-    Text
+    Text,
+    StyleProvider
 } from 'native-base';
 import Card from './Cards/Card'
 import {Image} from "react-native";
-
+import getTheme from '../../native-base-theme/components';
+import material from '../../native-base-theme/variables/material'
 
 
 import dataCustom from "./data";
@@ -23,72 +25,64 @@ import dataCustom from "./data";
 export default class HeaderFooter extends Component {
     render() {
         return (
-
-            <Container>
-                <Header androidStatusBarColor={'#000'}
-                        style={{
-                            backgroundColor: 'white',
-                            elevation: 4,
-                            zIndex: 1,
-                            fontWeight: 'bold'
-
-                        }} >
-                    <Body>
-                        <Title style={{color: 'black'}}>
-                            FARFETCH
-                        </Title>
-                    </Body>
+            <StyleProvider style={getTheme(material)}>
+                <Container>
+                    <Header>
+                        <Body>
+                            <Title>
+                                FARFETCH
+                            </Title>
+                        </Body>
 
 
-                    <Right>
-                        <Button transparent>
-                            <Icon name='cart' style={{color:'black'}}/>
-                        </Button>
-                    </Right>
+                        <Right>
+                            <Button transparent>
+                                <Icon name='cart' style={{color: 'black'}}/>
+                            </Button>
+                        </Right>
+
+                    </Header>
 
 
-
-                </Header>
-
-
-                <Content style={{zIndex:-1}}>
-                    <Image source={require('../Resources/Images/5.jpg')} style={{width: '100%', height: 350}}/>
-                    <Card name="Men Section"/>
-                    <Card name="Kids Section"/>
-                </Content>
+                    <Content>
+                        <Image source={require('../Resources/Images/5.jpg')} style={{width: '100%', height: 350}}/>
+                        <Card name="Men Section"/>
+                        <Card name="Kids Section"/>
+                    </Content>
 
 
-                <Footer style={{backgroundColor: 'white'}}>
-
-                    <FooterTab style={{backgroundColor: 'white'}}>
-
-                        <Button vertical>
-                            <Icon name="home" style={{color:'black'}}/>
-                            <Text style={{color:'black'}}>home</Text>
-                        </Button>
-
-                        <Button vertical>
-                            <Icon name="briefcase" style={{color:'black'}}/>
-                            <Text style={{color:'black'}}>Shop</Text>
-                        </Button>
-
-                        <Button vertical>
-                            <Icon name="ribbon" style={{color:'black'}}/>
-                            <Text style={{color:'black'}}>Designer</Text>
-                        </Button>
-
-                        <Button vertical>
-                            <Icon name="star" style={{color:'black'}}/>
-                            <Text style={{color:'black'}}>Wishlist</Text>
-                        </Button>
+                    <Footer>
 
 
-                    </FooterTab>
+                        <FooterTab>
 
-                </Footer>
+                            <Button active>
+                                <Icon name="home"/>
+                                <Text>home</Text>
+                            </Button>
 
-            </Container>
+                            <Button >
+                                <Icon name="briefcase"/>
+                                <Text>Shop</Text>
+                            </Button>
 
+                            <Button >
+                                <Icon name="ribbon" />
+                                <Text>Designer</Text>
+                            </Button>
+
+                            <Button >
+                                <Icon name="star"/>
+                                <Text>Wishlist</Text>
+                            </Button>
+
+
+                        </FooterTab>
+
+                    </Footer>
+
+                </Container>
+            </StyleProvider>
         );
     }
 }

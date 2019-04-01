@@ -7,7 +7,6 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import {Container} from "native-base";
 import HeaderFooter from './src/components/HeaderFooter'
 import SplashScreen from './src/components/SplashScreen'
@@ -16,11 +15,13 @@ import SplashScreen from './src/components/SplashScreen'
 type Props = {};
 export default class App extends Component<Props> {
 
+  //setting state from loading mock splash screen
   constructor(props) {
     super(props);
     this.state={isLoading:true}
   }
 
+  //creating a self destruction function
   performTimeDelay = async () => {
     return new Promise((resolve) =>
         setTimeout(
@@ -30,6 +31,8 @@ export default class App extends Component<Props> {
     );
   }
 
+
+  //changing state in componentDidMount
   async componentDidMount() {
     const data = await this.performTimeDelay();
     if(data!==null)
@@ -39,35 +42,15 @@ export default class App extends Component<Props> {
   }
   render() {
 
-    if ( this.state.isLoading){
-      return (<SplashScreen/>)
-    }
+    //Loading mock splash screen
+    // if ( this.state.isLoading){
+    //   return (<SplashScreen/>)
+    // }
     return (
         <Container>
           <HeaderFooter/>
         </Container>
-
-
-
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
