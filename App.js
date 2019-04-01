@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Container} from "native-base";
-import HeaderFooter from './src/components/HeaderFooter/HeaderFooter'
+import ContentContainer from './src/components/HeaderFooter/ContentContainer'
 
 
 
@@ -19,7 +19,7 @@ export default class App extends Component<Props> {
     return (
 
         <Container>
-          <HeaderFooter/>
+          <ContentContainer/>
         </Container>
     );
   }

@@ -1,91 +1,57 @@
 import React from 'react';
-import {StyleSheet, ScrollView, View,Image} from 'react-native';
+import {ScrollView} from 'react-native';
 import {
     Container,
-    Card,
-    CardItem,
     Text, Button
 } from 'native-base';
+import CardComp from './CardComp'
+import CardContainerHeader from './CardContainerHeader'
+import ProductsCards from './data'
 
-const CardContainer = (props) =>{
-        return (
 
-                <Container
-                    style={{
-                        marginTop: 10,
-                        height: 400,
-                        alignItems: 'center',
-                    justifyContent: 'center'
-                    }}>
 
-                    <View>
-                        <Text style={{fontWeight: 'bold', alignSelf:'center',marginBottom:20}}>
-                            {props.name}
-                        </Text>
-                    </View>
+/* Contains and handles all the cards
+* Requires following Props
+* sectionName
+* */
 
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+const CardContainer = (props) => {
+    return (
 
-                        <Card
-                            style={{
-                                height: 270,
-                                width: 200,
-                                marginLeft: 20}}>
+        <Container
+            style={{
+                marginTop: 10,
+                height: 400,
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
 
-                            <CardItem cardBody style={{flex:3}}>
-                                <Image source={require('../../Resources/Images/1.jpg')} style={{height: 200, flex:1}} />
-                            </CardItem>
+            <CardContainerHeader name={props.sectionName}/>
 
-                            <CardItem style={styles.cardFooter}>
-                                <Text>
-                                    Item Name {"\n"} Designer Name {"\n"} Price : 123
-                                </Text>
-                            </CardItem>
-                        </Card>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
 
-                        <Card style={{height: 270, width: 200, marginLeft: 20}}>
-                            <CardItem cardBody style={{flex:3}}>
-                                <Image source={require('../../Resources/Images/4.jpg')} style={{height: 200, flex: 1}}/>
-                            </CardItem>
+                {
+                    ProductsCards.map(productCard => {
+                            return (
+                                <CardComp imgSource = "../../Resources/Images/1.jpg"
+                                          itemName={productCard.itemName}
+                                          designerName={productCard.designerName}
+                                          price={productCard.price}/>
+                            )
+                        }
 
-                            <CardItem style={styles.cardFooter}>
-                                <Text>
-                                    Item Name {"\n"} Designer Name {"\n"} Price : 123
-                                </Text>
-                            </CardItem>
-                        </Card>
+                    )
+                }
 
-                        <Card style={{height: 270, width: 200, marginLeft: 20}}>
-                            <CardItem cardBody style={{flex:3}}>
-                                <Image source={require('../../Resources/Images/3.jpg')} style={{height: 200, flex: 1}}/>
-                            </CardItem>
+            </ScrollView>
 
-                            <CardItem style={styles.cardFooter}>
-                                <Text>
-                                    Item Name {"\n"} Designer Name {"\n"} Price : 123
-                                </Text>
-                            </CardItem>
-                        </Card>
+            <Button vertical style={{color: 'white', alignSelf: 'center', marginTop: 25, marginBottom: 20}}>
+                <Text>Shop Now</Text>
+            </Button>
 
-                        <Card style={{height: 270, width: 200, marginLeft: 20, marginRight: 10}}>
-                            <CardItem cardBody style={{flex:3}}>
-                                <Image source={require('../../Resources/Images/4.jpg')} style={{height: 200, flex: 1}}/>
-                            </CardItem>
+        </Container>
 
-                            <CardItem style={styles.cardFooter}>
-                                <Text>
-                                    Item Name {"\n"} Designer Name {"\n"} Price : 123
-                                </Text>
-                            </CardItem>
-                        </Card>
-                    </ScrollView>
-
-                    <Button vertical style={{color: 'white', alignSelf: 'center', marginTop:25,marginBottom: 20}}>
-                        <Text>Shop Now</Text>
-                    </Button>
-
-                </Container>
-
-        );
+    );
 };
 
+export default CardContainer;

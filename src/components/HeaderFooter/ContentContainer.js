@@ -8,7 +8,7 @@ import FooterComp from './FooterComp'
 
 
 
-export default class HeaderFooter extends Component {
+export default class ContentContainer extends Component {
     render() {
         return (
             //Provides styles to its children

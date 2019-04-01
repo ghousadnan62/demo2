@@ -8,8 +8,8 @@ const ContentComp = () => {
         <Content>
             <Image source={require('../../Resources/Images/5.jpg')}
                    style={{width: '100%', height: 350}}/>
-            <CardContainer name="Men Section"/>
-            <CardContainer name="Kids Section"/>
+            <CardContainer sectionName="Men Section"/>
+            <CardContainer sectionName="Kids Section"/>
         </Content>
     )
 };
