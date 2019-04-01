@@ -16,7 +16,7 @@ const CardComp = (props) => {
             style={styles.mainCard}>
 
             <CardItem cardBody style={styles.cardBody}>
-                <Image source={require("../../Resources/Images/1.jpg")}
+                <Image source={{uri: props.imgSource}}
                        style={styles.cardBodyImg}
                 />
             </CardItem>
@@ -26,7 +26,6 @@ const CardComp = (props) => {
                     {props.itemName} {"\n"} {props.designerName} {"\n"} {props.price}
                     {}
                 </Text>
-
             </CardItem>
         </Card>
     )
