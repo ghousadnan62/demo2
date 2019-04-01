@@ -8,9 +8,10 @@ const HeaderComp = () => {
 
         <Header>
             <StatusBarManger/>
+
             <Body>
                 <Title>
-                    FARFETCH
+                    Farfetch
                 </Title>
             </Body>
 

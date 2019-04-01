@@ -2,11 +2,11 @@ import React from 'react';
 import {ScrollView} from 'react-native';
 import {
     Container,
-    Text, Button
 } from 'native-base';
 import CardComp from './CardComp'
 import CardContainerHeader from './CardContainerHeader'
 import ProductsCards from './data'
+import ButtonComp from "../ContentContainerComp/ButtonComp";
 
 
 
@@ -21,7 +21,7 @@ const CardContainer = (props) => {
         <Container
             style={{
                 marginTop: 10,
-                height: 400,
+                height: 430,
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
@@ -44,11 +44,7 @@ const CardContainer = (props) => {
                 }
 
             </ScrollView>
-
-            <Button vertical style={{color: 'white', alignSelf: 'center', marginTop: 25, marginBottom: 20}}>
-                <Text>Shop Now</Text>
-            </Button>
-
+            <ButtonComp title={'Shop Now'}/>
         </Container>
 
     );
