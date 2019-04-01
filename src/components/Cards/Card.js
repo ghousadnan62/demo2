@@ -70,7 +70,7 @@ export default class CardImageExample extends Component {
                         </Card>
                     </ScrollView>
 
-                    <Button vertical style={{backgroundColor: 'black', color: 'white', alignSelf: 'center', marginTop:25,marginBottom: 20}}>
+                    <Button vertical style={{color: 'white', alignSelf: 'center', marginTop:25,marginBottom: 20}}>
                         <Text>Shop Now</Text>
                     </Button>
 
