@@ -8,7 +8,7 @@
 
 import React, {Component} from 'react';
 import {Container} from "native-base";
-import HeaderFooter from './src/components/HeaderFooter'
+import HeaderFooter from './src/components/HeaderFooter/HeaderFooter'
 import SplashScreen from './src/components/SplashScreen'
 
 
@@ -47,6 +47,7 @@ export default class App extends Component<Props> {
     //   return (<SplashScreen/>)
     // }
     return (
+
         <Container>
           <HeaderFooter/>
         </Container>
