@@ -25,7 +25,7 @@ export default class HeaderFooter extends Component {
         return (
 
             <Container>
-                <Header androidStatusBarColor={'#000'}
+                <Header androidStatusBarColor={'#fff'}
                         style={{
                             backgroundColor: 'white',
                             elevation: 4,
