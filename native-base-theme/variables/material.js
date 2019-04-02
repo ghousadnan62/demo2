@@ -26,7 +26,7 @@ export default {
   androidRipple: true,
   androidRippleColor: "rgba(256, 256, 256, 0.3)",
   androidRippleColorDark: "rgba(0, 0, 0, 0.15)",
-  btnUppercaseAndroidText: true,
+  btnUppercaseAndroidText: false,
 
   // Badge
   badgeBg: "#ED1727",
@@ -141,7 +141,7 @@ export default {
 
   // FooterTab
   tabBarTextColor: "#000",
-  tabBarTextSize: 11,
+  tabBarTextSize: 10,
   activeTab: "#000",
   sTabBarActiveTextColor: "#424242",
   tabBarActiveTextColor: "#212121",

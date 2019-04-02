@@ -1,32 +1,39 @@
 import React from 'react';
-import {Button, Container, Footer, FooterTab, Icon, Text} from "native-base";
+import {Button, Footer, FooterTab, Icon, Text} from "native-base";
 
 const FooterComp = () => {
     return (
 
         <Footer>
-            <FooterTab>
+            <FooterTab style={{
+                display: 'flex'
+            }}>
 
-                <Button active>
+                <Button active uppercase={false}>
                     <Icon name="home"/>
                     <Text>home</Text>
                 </Button>
 
-                <Button>
+                <Button uppercase={false}>
                     <Icon name="briefcase"/>
                     <Text>Shop</Text>
                 </Button>
 
-                <Button>
+
+                <Button uppercase={false}>
                     <Icon name="ribbon"/>
                     <Text>Designer</Text>
                 </Button>
 
-                <Button>
+                <Button uppercase={false}>
                     <Icon name="star"/>
                     <Text>Wishlist</Text>
                 </Button>
 
+                <Button uppercase={false}>
+                    <Icon name="person"/>
+                    <Text>Me</Text>
+                </Button>
 
             </FooterTab>
 
