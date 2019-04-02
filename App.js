@@ -7,21 +7,19 @@
  */
 
 import React, {Component} from 'react';
-import {Container} from "native-base";
-import ContentContainer from './src/components/ContentContainerComp/ContentContainer'
+import HomeScreen from './src/Screens/HomeScreen'
 
 
 
 type Props = {};
 export default class App extends Component<Props> {
-
   render() {
     return (
-
-        <Container>
-          <ContentContainer/>
-        </Container>
-    );
+        <HomeScreen/>
+    )
   }
 }
+
+
+
 

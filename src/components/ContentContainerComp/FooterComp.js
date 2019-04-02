@@ -9,28 +9,28 @@ const FooterComp = () => {
                 display: 'flex'
             }}>
 
-                <Button active uppercase={false}>
+                <Button active>
                     <Icon name="home"/>
                     <Text>home</Text>
                 </Button>
 
-                <Button uppercase={false}>
+                <Button>
                     <Icon name="briefcase"/>
                     <Text>Shop</Text>
                 </Button>
 
 
-                <Button uppercase={false}>
+                <Button>
                     <Icon name="ribbon"/>
                     <Text>Designer</Text>
                 </Button>
 
-                <Button uppercase={false}>
+                <Button>
                     <Icon name="star"/>
                     <Text>Wishlist</Text>
                 </Button>
 
-                <Button uppercase={false}>
+                <Button>
                     <Icon name="person"/>
                     <Text>Me</Text>
                 </Button>
