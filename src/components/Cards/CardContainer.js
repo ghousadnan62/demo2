@@ -33,7 +33,8 @@ const CardContainer = (props) => {
                 {
                     ProductsCards.map(productCard => {
                             return (
-                                <CardComp imgSource = {productCard.imgSource}
+                                <CardComp key = {productCard.id}
+                                          imgSource = {productCard.imgSource}
                                           itemName={productCard.itemName}
                                           designerName={productCard.designerName}
                                           price={productCard.price}/>
