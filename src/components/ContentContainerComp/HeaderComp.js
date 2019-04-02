@@ -1,6 +1,7 @@
-import StatusBarManger from "./StatusBarManager";
+
 import {Body, Button, Header, Icon, Right, Title} from "native-base";
 import React from "react";
+import StatusBarManger from "./StatusBarManager";
 
 
 const HeaderComp = () => {
