@@ -9,9 +9,8 @@ import React from "react";
 
 const ButtonComp = (props) => {
     return(
-        <Button rounded
+        <Button rounded onPress={props.onPressAction}
             style={{
-
                 backgroundColor: 'black',
                 alignSelf: 'center',
                 marginTop: 25,
