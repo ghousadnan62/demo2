@@ -3,7 +3,11 @@ import HomeScreen from './HomeScreen'
 
 const AppNavigator = createStackNavigator({
     Home: {
-        screen: HomeScreen
+        screen: HomeScreen,
+        navigationOptions: {
+            title: 'Home',
+            header: null
+        }
     }
 });
 

@@ -1,13 +1,15 @@
-import React from 'react'
+import React,{Component} from 'react'
 import {Container} from "native-base";
 import ContentContainer from "../components/ContentContainerComp/ContentContainer";
 
-const HomeScreen = () => {
-    return(
-        <Container>
-            <ContentContainer/>
-        </Container>
-    )
-};
+export default class HomeScreen extends Component {
+    render() {
+        return (
+            <Container>
+                <ContentContainer/>
+            </Container>
+        )
+    }
+}
 
-export default HomeScreen;
+
