@@ -1,5 +1,5 @@
-import {Card, CardItem, Text} from "native-base";
-import {Image, StyleSheet} from "react-native";
+import {Card, CardItem, Container} from "native-base";
+import {Image, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
 /*Component builds a card and
@@ -11,7 +11,7 @@ requires following props
 * */
 
 const CardComp = (props) => {
-    return(
+    return (
         <Card
             style={styles.mainCard}>
 
@@ -22,38 +22,55 @@ const CardComp = (props) => {
             </CardItem>
 
             <CardItem bordered style={styles.cardFooter}>
-                <Text>
-                    {props.itemName} {"\n"} {props.designerName} {"\n"} {props.price}
-                    {}
-                </Text>
+
+                <View>
+                    <Text style={{
+                        fontWeight: 'bold',
+                        textAlign: 'center'
+                    }}>
+                        {props.designerName}
+                    </Text>
+
+                    <Text style={{
+                        textAlign: 'center'
+                    }}>
+                        {props.shortDescription}
+                    </Text>
+
+
+                    <Text style={{
+                        textAlign: 'center'
+                    }}>
+                        ${props.price}
+                    </Text>
+                </View>
             </CardItem>
         </Card>
     )
+
 };
 
 export default CardComp;
 
 // styling of the card
 const styles = StyleSheet.create({
-    mainCard:{
+    mainCard: {
         height: 270,
         width: 200,
         marginLeft: 20
     },
 
-    cardBody:{
-        flex:3
+    cardBody: {
+        flex: 3
     },
 
-    cardBodyImg:{
+    cardBodyImg: {
         height: 200,
-        flex:1
+        flex: 1
     },
 
-    cardFooter:{
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex:1
+    cardFooter: {
+        flex: 1
     }
 
 });
