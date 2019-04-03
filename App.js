@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import HomeScreen from './src/Screens/HomeScreen'
 import SplashScreen from './src/Screens/SplashScreen'
+import ScreenManager from './src/Screens/ScreenManager'
 
 
 type Props = {};
@@ -35,7 +35,7 @@ export default class App extends Component<Props> {
             return <SplashScreen />;
         }
         return (
-            <HomeScreen/>
+            <ScreenManager/>
         )
     }
 }

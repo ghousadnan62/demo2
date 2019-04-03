@@ -1,6 +1,6 @@
 import {Button, Text} from "native-base";
 import React from "react";
-
+import {Actions} from "react-native-router-flux";
 /*
 * A custom button component
 * requires following props

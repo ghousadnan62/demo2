@@ -1,12 +1,19 @@
-import {createAppContainer, createStackNavigator} from "react-navigation";
+import React from 'react';
+import {Scene, Router} from 'react-native-router-flux';
 import HomeScreen from './HomeScreen'
-const AppNavigator = createStackNavigator({
-    Home: {
-        screen: HomeScreen,
-        navigationOptions: {
-            header: null
-        }
-    }
-});
+import DummyScreen from './DummyScreen'
 
-export default createAppContainer(AppNavigator);
+
+
+const ScreenManager = () => {
+    return (
+        <Router>
+            <Scene key={'root'}>
+                <Scene key={"homeScreen"} component={HomeScreen} hideNavBar={true} initial/>
+                <Scene key={"dummyScreen"} component={DummyScreen} hideNavBar={false}/>
+            </Scene>
+        </Router>
+    )
+};
+
+export default ScreenManager;

@@ -7,7 +7,7 @@ import CardComp from './CardComp'
 import CardContainerHeader from './CardContainerHeader'
 import ProductsCards from './data'
 import ButtonComp from "../ContentContainerComp/ButtonComp";
-
+import {Actions} from "react-native-router-flux";
 
 
 /* Contains and handles all the cards
@@ -45,7 +45,8 @@ const CardContainer = (props) => {
                 }
 
             </ScrollView>
-            <ButtonComp title={'Shop Now'}/>
+            <ButtonComp title={'Shop Now'}
+                        onPressAction = {() => Actions.dummyScreen()}/>
         </Container>
 
     );
