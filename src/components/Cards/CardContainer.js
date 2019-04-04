@@ -3,7 +3,6 @@ import {ScrollView} from 'react-native';
 import {Container} from 'native-base';
 import CardComp from './CardComp'
 import CardContainerHeader from './CardContainerHeader'
-import ProductsCards from './data'
 import ButtonComp from "../ContentContainerComp/ButtonComp";
 import {Actions} from "react-native-router-flux";
 
@@ -66,7 +65,7 @@ export default class CardContainer extends React.Component {
 
                 </ScrollView>
                 <ButtonComp title={'Shop Now'}
-                            onPressAction={() => Actions.dummyScreen()}/>
+                            onPressAction={() => Actions.shopNowScreen()}/>
             </Container>
 
         );

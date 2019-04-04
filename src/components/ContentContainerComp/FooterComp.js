@@ -1,5 +1,8 @@
 import React from 'react';
 import {Button, Footer, FooterTab, Icon, Text} from "native-base";
+import {Actions} from "react-native-router-flux";
+
+
 
 const FooterComp = () => {
     return (
@@ -9,28 +12,28 @@ const FooterComp = () => {
                 display: 'flex'
             }}>
 
-                <Button active>
+                <Button active onPress={()=>Actions.homeScreen()}>
                     <Icon name="home"/>
                     <Text>home</Text>
                 </Button>
 
-                <Button>
+                <Button onPress={()=>Actions.shopScreen()}>
                     <Icon name="briefcase"/>
                     <Text>Shop</Text>
                 </Button>
 
 
-                <Button>
+                <Button onPress={()=>Actions.designerScreen()}>
                     <Icon name="ribbon"/>
                     <Text>Designer</Text>
                 </Button>
 
-                <Button>
+                <Button onPress={()=>Actions.wishlistScreen()}>
                     <Icon name="star"/>
                     <Text>Wishlist</Text>
                 </Button>
 
-                <Button>
+                <Button onPress={()=>Actions.accountScreen()}>
                     <Icon name="person"/>
                     <Text>Me</Text>
                 </Button>

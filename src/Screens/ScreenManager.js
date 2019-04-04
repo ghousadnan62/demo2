@@ -1,8 +1,11 @@
 import React from 'react';
 import {Scene, Router} from 'react-native-router-flux';
-import HomeScreen from './HomeScreen'
-import DummyScreen from './DummyScreen'
-
+import HomeScreen from './HomeScreen';
+import ShopNowScreen from './ShopNowScreen';
+import AccountScreen from './AccountScreen';
+import DesignerScreen from './DesignerScreen';
+import ShopScreen from './ShopScreen';
+import WishlistScreen from './WishlistScreen';
 
 
 const ScreenManager = () => {
@@ -10,7 +13,11 @@ const ScreenManager = () => {
         <Router>
             <Scene key={'root'}>
                 <Scene key={"homeScreen"} component={HomeScreen} hideNavBar={true} initial/>
-                <Scene key={"dummyScreen"} component={DummyScreen} hideNavBar={false}/>
+                <Scene key={"shopNowScreen"} component={ShopNowScreen}/>
+                <Scene key={"accountScreen"} component={AccountScreen}/>
+                <Scene key={"designerScreen"} component={DesignerScreen}/>
+                <Scene key={"shopScreen"} component={ShopScreen}/>
+                <Scene key={"wishlistScreen"} component={WishlistScreen}/>
             </Scene>
         </Router>
     )
