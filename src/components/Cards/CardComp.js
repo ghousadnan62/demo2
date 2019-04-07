@@ -70,7 +70,8 @@ const styles = StyleSheet.create({
     },*/
 
     cardBody: {
-        flex: 3
+        flex: 3,
+        overflow:'hidden'
     },
 
     cardBodyImg: {

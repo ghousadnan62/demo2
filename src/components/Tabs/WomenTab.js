@@ -1,11 +1,14 @@
 import React from 'react';
 import {View} from 'react-native'
 import {Text} from "native-base";
+import ClothingContainer from './ClothingContainer'
+
+
 
 const WomenTab = () => {
     return (
         <View>
-            <Text> Hello from Women Tab</Text>
+            <ClothingContainer/>
         </View>
     );
 };

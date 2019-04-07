@@ -55,7 +55,7 @@ export default class HomeScreenCardContainer extends React.Component {
                         this.state.homeScreenProductDetails.map(productCard => {
                                 return (
                                     <CardComp key={productCard.id}
-                                              imgSource={'https://cdn4.iconfinder.com/data/icons/shopping-people-1/66/42-512.png'}
+                                              imgSource={'https://images.pexels.com/photos/404171/pexels-photo-404171.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'}
                                               designerName={productCard.product_name}
                                               shortDescription = {productCard.short_description}
                                               price={productCard.offer_price}
