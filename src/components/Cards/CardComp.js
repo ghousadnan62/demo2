@@ -4,16 +4,25 @@ import React from "react";
 
 /*Component builds a card and
 requires following props
+---------------------------
 * imgSource
 * itemName
 * designerName
 * price
+--------------------------
+cardHeight
+cardWidth
+leftMargin
 * */
 
 const CardComp = (props) => {
     return (
         <Card
-            style={styles.mainCard}>
+            style={{
+                height: props.cardHeight,
+                width: props.cardWidth,
+                marginLeft: props.leftMargin
+            }}>
 
             <CardItem cardBody style={styles.cardBody}>
                 <Image source={{uri: props.imgSource}}
@@ -54,11 +63,11 @@ export default CardComp;
 
 // styling of the card
 const styles = StyleSheet.create({
-    mainCard: {
+    /*mainCard: {
         height: 270,
         width: 200,
-        marginLeft: 20
-    },
+        /!*marginLeft: 20*!/
+    },*/
 
     cardBody: {
         flex: 3

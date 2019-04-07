@@ -9,10 +9,12 @@ import {Actions} from "react-native-router-flux";
 
 /* Contains and handles all the cards
 * Requires following Props
+* -----------------------------------
 * sectionName
 * */
 
-export default class CardContainer extends React.Component {
+export default class HomeScreenCardContainer extends React.Component {
+
 
 
     constructor(props) {
@@ -22,7 +24,6 @@ export default class CardContainer extends React.Component {
             baseAddress: "http://estore.nfasoft.com"
         };
     }
-
     componentDidMount(){
         fetch("http://estore.nfasoft.com/api/products.php")
             .then(response => response.json())
@@ -54,10 +55,14 @@ export default class CardContainer extends React.Component {
                         this.state.homeScreenProductDetails.map(productCard => {
                                 return (
                                     <CardComp key={productCard.id}
-                                              imgSource={productCard.image}
+                                              imgSource={'https://cdn4.iconfinder.com/data/icons/shopping-people-1/66/42-512.png'}
                                               designerName={productCard.product_name}
                                               shortDescription = {productCard.short_description}
-                                              price={productCard.offer_price}/>
+                                              price={productCard.offer_price}
+                                              cardHeight={270}
+                                              cardWidth={200}
+                                              leftMargin={20}
+                                    />
                                 )
                             }
                         )
