@@ -13,21 +13,21 @@ export default class ClothingContainer extends Component {
             }}>
 
                 <MiniCardComp
-                    imgSource={'https://m.media-amazon.com/images/I/A1rcXo55giL._CLa%7C2140,2000%7C51g4BTlwJcL.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0.png'}
+                    imgSource={this.props.imgLink}
                     catagoryName={'T-Shirts'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
                 />
                 <MiniCardComp
-                    imgSource={'https://m.media-amazon.com/images/I/A1rcXo55giL._CLa%7C2140,2000%7C51g4BTlwJcL.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0.png'}
+                    imgSource={this.props.imgLink}
                     catagoryName={'T-Shirts'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
                 />
                 <MiniCardComp
-                    imgSource={'https://m.media-amazon.com/images/I/A1rcXo55giL._CLa%7C2140,2000%7C51g4BTlwJcL.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0.png'}
+                    imgSource={this.props.imgLink}
                     catagoryName={'T-Shirts'}
                     cardHeight={115}
                     cardWidth={115}
@@ -35,26 +35,27 @@ export default class ClothingContainer extends Component {
                 />
 
                 <MiniCardComp
-                    imgSource={'https://m.media-amazon.com/images/I/A1rcXo55giL._CLa%7C2140,2000%7C51g4BTlwJcL.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0.png'}
+                    imgSource={this.props.imgLink}
                     catagoryName={'T-Shirts'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
                 />
                 <MiniCardComp
-                    imgSource={'https://m.media-amazon.com/images/I/A1rcXo55giL._CLa%7C2140,2000%7C51g4BTlwJcL.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0.png'}
+                    imgSource={this.props.imgLink}
                     catagoryName={'T-Shirts'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
                 />
                 <MiniCardComp
-                    imgSource={'https://m.media-amazon.com/images/I/A1rcXo55giL._CLa%7C2140,2000%7C51g4BTlwJcL.png%7C0,0,2140,2000+0.0,0.0,2140.0,2000.0.png'}
+                    imgSource={this.props.imgLink}
                     catagoryName={'T-Shirts'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
                 />
+
             </View>
         );
     }

@@ -3,7 +3,7 @@ import {View} from "native-base";
 import MiniCardComp from '../Cards/MiniCardComp'
 
 
-export default class BagsContainer extends Component {
+export default class AccessoriesContainer extends Component {
     render() {
 
         return (
@@ -14,14 +14,7 @@ export default class BagsContainer extends Component {
 
                 <MiniCardComp
                     imgSource={this.props.imgLink}
-                    catagoryName={'Bags'}
-                    cardHeight={115}
-                    cardWidth={115}
-                    Margin={10}
-                />
-                <MiniCardComp
-                    imgSource={this.props.imgLink}
-                    catagoryName={'Bags'}
+                    catagoryName={'Accessories'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
@@ -29,7 +22,7 @@ export default class BagsContainer extends Component {
 
                 <MiniCardComp
                     imgSource={this.props.imgLink}
-                    catagoryName={'Bags'}
+                    catagoryName={'Accessories'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
@@ -37,22 +30,7 @@ export default class BagsContainer extends Component {
 
                 <MiniCardComp
                     imgSource={this.props.imgLink}
-                    catagoryName={'Bags'}
-                    cardHeight={115}
-                    cardWidth={115}
-                    Margin={10}
-                />
-                <MiniCardComp
-                    imgSource={this.props.imgLink}
-                    catagoryName={'Bags'}
-                    cardHeight={115}
-                    cardWidth={115}
-                    Margin={10}
-                />
-
-                <MiniCardComp
-                    imgSource={this.props.imgLink}
-                    catagoryName={'Bags'}
+                    catagoryName={'Accessories'}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
