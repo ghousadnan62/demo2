@@ -21,7 +21,7 @@ export default class ContentContainer extends Component {
                     <ContentComp/>
 
                     {/*modular footer component*/}
-                    <FooterComp/>
+                    <FooterComp activeTabNum={1}/>
 
                 </Container>
             </StyleProvider>

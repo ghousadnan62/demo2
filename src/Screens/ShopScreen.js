@@ -10,7 +10,7 @@ const AccountScreen = () => {
         <StyleProvider style={getTheme(material)}>
             <Container>
                 <ShopScreenContainer/>
-                <FooterComp/>
+                <FooterComp activeTabNum={2}/>
             </Container>
         </StyleProvider>
     );
