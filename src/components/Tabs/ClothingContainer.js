@@ -9,7 +9,7 @@ export default class ClothingContainer extends Component {
         return (
             <View style = {{
                 flexDirection: 'row',
-                flexWrap: 'wrap'
+                flexWrap: 'wrap',
             }}>
 
                 <MiniCardComp
