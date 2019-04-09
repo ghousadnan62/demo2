@@ -40,7 +40,7 @@ const MiniCardComp = (props) => {
                 <View>
                     <Text style={{
                         fontWeight:'bold'
-                    }}>
+                    }}>z
                         {props.catagoryName}
                     </Text>
                 </View>

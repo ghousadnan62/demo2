@@ -1,7 +1,7 @@
 import {Card, CardItem, Container} from "native-base";
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, StyleSheet, Text, View, Button, TouchableOpacity} from "react-native";
 import React from "react";
-
+import {Actions} from "react-native-router-flux";
 /*Component builds a card and
 requires following props
 ---------------------------
@@ -17,44 +17,47 @@ leftMargin
 
 const CardComp = (props) => {
     return (
-        <Card
-            style={{
-                height: props.cardHeight,
-                width: props.cardWidth,
-                marginLeft: props.leftMargin
-            }}>
+        <TouchableOpacity onPress={()=> Actions.productDetail() }>
+            <Card
+                pointerEvents="none"
+                style={{
+                    height: props.cardHeight,
+                    width: props.cardWidth,
+                    marginLeft: props.leftMargin
+                }}>
 
-            <CardItem cardBody style={styles.cardBody}>
-                <Image source={{uri: props.imgSource}}
-                       style={styles.cardBodyImg}
-                />
-            </CardItem>
+                <CardItem cardBody style={styles.cardBody}>
+                    <Image source={{uri: props.imgSource}}
+                           style={styles.cardBodyImg}
+                    />
+                </CardItem>
 
-            <CardItem bordered style={styles.cardFooter}>
+                <CardItem bordered style={styles.cardFooter}>
 
-                <View>
-                    <Text style={{
-                        fontWeight: 'bold',
-                        textAlign: 'center'
-                    }}>
-                        {props.designerName}
-                    </Text>
+                    <View>
+                        <Text style={{
+                            fontWeight: 'bold',
+                            textAlign: 'center'
+                        }}>
+                            {props.designerName}
+                        </Text>
 
-                    <Text style={{
-                        textAlign: 'center'
-                    }}>
-                        {props.shortDescription}
-                    </Text>
+                        <Text style={{
+                            textAlign: 'center'
+                        }}>
+                            {props.shortDescription}
+                        </Text>
 
 
-                    <Text style={{
-                        textAlign: 'center'
-                    }}>
-                        ${props.price}
-                    </Text>
-                </View>
-            </CardItem>
-        </Card>
+                        <Text style={{
+                            textAlign: 'center'
+                        }}>
+                            ${props.price}
+                        </Text>
+                    </View>
+                </CardItem>
+            </Card>
+        </TouchableOpacity>
     )
 
 };
@@ -71,7 +74,7 @@ const styles = StyleSheet.create({
 
     cardBody: {
         flex: 3,
-        overflow:'hidden'
+        overflow: 'hidden'
     },
 
     cardBodyImg: {

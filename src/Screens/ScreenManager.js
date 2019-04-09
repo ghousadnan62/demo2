@@ -6,7 +6,7 @@ import AccountScreen from './AccountScreen';
 import DesignerScreen from './DesignerScreen';
 import ShopScreen from './ShopScreen';
 import WishlistScreen from './WishlistScreen';
-
+import ProductDetail from './ProductDetail';
 const ScreenManager = () => {
     return (
         <Router>
@@ -17,7 +17,7 @@ const ScreenManager = () => {
                 <Scene key={"designerScreen"} component={DesignerScreen}/>
                 <Scene key={"shopScreen"} component={ShopScreen}/>
                 <Scene key={"wishlistScreen"} component={WishlistScreen}/>
-
+                <Scene key={"productDetail"} component={ProductDetail}/>
             </Scene>
         </Router>
     )
