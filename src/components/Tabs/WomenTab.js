@@ -4,8 +4,7 @@ import {Text} from "native-base";
 import ClothingContainer from './ClothingContainer';
 import ShoesContainer from './ShoesContainer';
 import BagsContainer from './BagsContainer';
-import AccessoriesContainer from './AccessoriesContainer';
-import JewellaryContainer from './JewellaryContainer';
+import OneByThreeProductContainer from './OneByThreeProductContainer';
 
 
 const WomenTab = () => {
@@ -62,9 +61,9 @@ const WomenTab = () => {
             }}>
                 Accessories
             </Text>
-            <AccessoriesContainer
+            <OneByThreeProductContainer
                 imgLink={'https://review.chinabrands.com/chinabrands/seo/image/20180912/wholesale%20fashion%20accessories.jpg'}
-
+                catagoryName={'Accessories'}
             />
 
             <Text style={{
@@ -75,9 +74,10 @@ const WomenTab = () => {
                 Jewellery
             </Text>
 
-            <JewellaryContainer
+            <OneByThreeProductContainer
                 imgLink={'https://5.imimg.com/data5/VI/MW/MY-4509493/traditional-pearl-red-bahubali-earring-for-women-jewellery-500x500.jpg'}
-                />
+                catagoryName={'Jewellery'}
+            />
 
 
         </View>

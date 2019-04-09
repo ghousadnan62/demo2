@@ -1,12 +1,21 @@
 import React from 'react';
-import {Text} from "native-base";
+import {Container, StyleProvider} from "native-base";
+import FooterComp from '../components/ContentContainerComp/FooterComp'
+import getTheme from "../../native-base-theme/components";
+import material from "../../native-base-theme/variables/material";
 
-const AccountScreen = () => {
+
+
+
+const DesignerScreen = () => {
     return (
-        <Text>
-            Hello from Designer Screen
-        </Text>
+        <StyleProvider style={getTheme(material)}>
+            <Container>
+
+                <FooterComp activeTabNum={3}/>
+            </Container>
+        </StyleProvider>
     );
 };
 
-export default AccountScreen;
+export default DesignerScreen;

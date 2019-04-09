@@ -4,8 +4,7 @@ import {Text} from "native-base";
 import ClothingContainer from './ClothingContainer';
 import ShoesContainer from './ShoesContainer';
 import BagsContainer from './BagsContainer';
-import AccessoriesContainer from './AccessoriesContainer';
-import JewellaryContainer from './JewellaryContainer';
+import OneByThreeProductContainer from './OneByThreeProductContainer';
 
 
 const MenTab = () => {
@@ -62,9 +61,9 @@ const MenTab = () => {
             }}>
                 Accessories
             </Text>
-            <AccessoriesContainer
+            <OneByThreeProductContainer
                 imgLink={'http://stat.homeshop18.com/homeshop18/images/productImages/639/fidato-only-you-mens-accessories-range-medium_c95f4fe54d59e08b3cc96cdf6558ae69.jpg'}
-
+                catagoryName={'Accessories'}
             />
 
             <Text style={{
@@ -75,8 +74,9 @@ const MenTab = () => {
                 Jewellery
             </Text>
 
-            <JewellaryContainer
+            <OneByThreeProductContainer
                 imgLink={'https://cdn.shopify.com/s/files/1/0198/8790/products/Cool_Men_s_Stainless_Steel_Black_Wolf_Fang_Teeth_Pendant_Necklace_Chain_1024x1024.JPG?v=1526914353'}
+                catagoryName={'Jewellery'}
             />
 
 

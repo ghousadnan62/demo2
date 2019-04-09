@@ -2,8 +2,16 @@ import React, {Component} from 'react';
 import {View} from "native-base";
 import MiniCardComp from '../Cards/MiniCardComp'
 
+/*
+* props required
+* -----------------
+* imgLink
+* catagoryName
+* */
 
-export default class AccessoriesContainer extends Component {
+
+
+export default class OneByThreeProductContainer extends Component {
     render() {
 
         return (
@@ -14,7 +22,7 @@ export default class AccessoriesContainer extends Component {
 
                 <MiniCardComp
                     imgSource={this.props.imgLink}
-                    catagoryName={'Accessories'}
+                    catagoryName={this.props.catagoryName}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
@@ -22,7 +30,7 @@ export default class AccessoriesContainer extends Component {
 
                 <MiniCardComp
                     imgSource={this.props.imgLink}
-                    catagoryName={'Accessories'}
+                    catagoryName={this.props.catagoryName}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
@@ -30,13 +38,11 @@ export default class AccessoriesContainer extends Component {
 
                 <MiniCardComp
                     imgSource={this.props.imgLink}
-                    catagoryName={'Accessories'}
+                    catagoryName={this.props.catagoryName}
                     cardHeight={115}
                     cardWidth={115}
                     Margin={10}
                 />
-
-
 
             </View>
         );
