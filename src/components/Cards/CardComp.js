@@ -1,4 +1,4 @@
-import {Card, CardItem, Container} from "native-base";
+import {Card, CardItem} from "native-base";
 import {Image, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
