@@ -1,5 +1,4 @@
 import React from 'react';
-import {View} from 'react-native'
 import {Container, Content, Tabs, Tab} from "native-base";
 import WomenTab from '../Tabs/WomenTab';
 import MenTab from '../Tabs/MenTab';

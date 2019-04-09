@@ -17,7 +17,8 @@ export default class OneByThreeProductContainer extends Component {
         return (
             <View style = {{
                 flexDirection: 'row',
-                flexWrap: 'wrap'
+                flexWrap: 'wrap',
+                justifyContent: 'space-around'
             }}>
 
                 <MiniCardComp
